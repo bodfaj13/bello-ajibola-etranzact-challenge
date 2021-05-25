@@ -1,0 +1,108 @@
+.product {
+  .product-main {
+    padding-top: 1rem;
+
+    .top-holder {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid $blue;
+      margin: 1rem 2rem;
+      padding: 0 0 1rem;
+
+      @include mobile() {
+        flex-direction: column;
+      }
+
+      .title {
+        font-weight: 600;
+        line-height: 45px;
+        font-size: 23px;
+        margin-bottom: 0;
+      }
+
+      .sort-holder {
+        display: flex;
+        align-items: center;
+
+        @include mobile() {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          align-items: center;
+
+          .sort-label {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            margin-bottom: 0.5rem;
+          }
+
+          .sort-select {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            margin-bottom: 0.5rem;
+          }
+
+          .add-btn {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            margin-left: 0;
+          }
+        }
+
+        .sort-label {
+          margin-bottom: 0;
+          span {
+            margin-left: 0.5rem;
+            font-weight: 300;
+            line-height: 36px;
+            font-size: 16px;
+          }
+        }
+
+        .sort-select {
+          margin-left: 0.5rem;
+          width: 6rem;
+        }
+      }
+
+      .add-btn {
+        font-weight: 700 !important;
+        background: $blue;
+        color: $white;
+        border-radius: 8px;
+        padding: 0.1rem 1rem 2rem;
+        line-height: 30px;
+        font-size: 16px;
+        margin-left: 2rem;
+      }
+    }
+
+    .table-holder {
+      padding: 0 2rem;
+      .action-holder {
+        .action-btn {
+          font-weight: 500 !important;
+          background: $blue;
+          color: $white;
+          border-radius: 8px;
+          padding: 0.1rem 1rem 1.8rem;
+          line-height: 24px;
+          font-size: 14px;
+          &:last-child {
+            margin-left: 1rem;
+          }
+          &.delete {
+            background: $red;
+          }
+        }
+      }
+    }
+  }
+}

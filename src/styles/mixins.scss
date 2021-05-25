@@ -1,0 +1,48 @@
+// responsiveness
+@mixin desktop() {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 668px) and (max-width: 899px) {
+    @content;
+  }
+}
+
+@mixin mini-desktop() {
+  @media (min-width: 1005px) and (max-width: 1251px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin smallmobile() {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin largedesktop() {
+  @media (min-width: 1550px) {
+    @content;
+  }
+}
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$blue: #2885CA;
+$lightgrey: #E4E4E4;
+$red: #BC1F27;
+$lightergrey: #ACACAC;
+$lightergreyv1: #C4C4C4;
+$darkgrey: #7A7A7A;
+$lightblue: #1890ff;
+$defaultgrey: #d9d9d9;

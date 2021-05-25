@@ -1,0 +1,118 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+  padding: 0 0 1rem;
+  border-bottom: 2px solid $lightgrey;
+  align-items: center;
+
+  .logo-holder {
+    img {
+      height: 2.7rem;
+      width: 14rem;
+    }
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+
+    .actions-and-links {
+      display: flex;
+    }
+
+    .actions-and-links {
+      @include mobile() {
+        display: none;
+      }
+    }
+
+    .nav-btn {
+      background: $blue;
+      color: $white;
+      border-radius: 8px;
+      padding: 0.5rem 1rem 1.9rem;
+      font-size: 15px;
+      margin-left: 0.5rem;
+    }
+
+    .nav-link {
+      margin-left: 3rem;
+      font-size: 16px;
+      padding-bottom: 0.2rem;
+      &:hover,
+      &.active {
+        border-bottom: 3px solid $red;
+      }
+    }
+
+    .user-avatar {
+      margin-left: 3rem;
+      img {
+        height: 2rem;
+        width: 2rem;
+        cursor: pointer;
+      }
+    }
+
+    .nav-mobile {
+      display: inline-block;
+      cursor: pointer;
+
+      @include mobile() {
+        display: block;
+      }
+
+      @include desktop() {
+        display: none;
+      }
+
+      @include mini-desktop() {
+        display: block;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 30px;
+        height: 2px;
+        background-color: $blue;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+
+      @include mobile() {
+        .bar1,
+        .bar2,
+        .bar3 {
+          width: 32px;
+          height: 3px;
+        }
+      }
+
+      @include mini-desktop() {
+        .bar1,
+        .bar2,
+        .bar3 {
+          width: 32px;
+          height: 3px;
+        }
+      }
+    }
+
+    .change .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .change .bar2 {
+      opacity: 0;
+    }
+
+    .change .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-5px, -8px);
+    }
+
+  }
+}
